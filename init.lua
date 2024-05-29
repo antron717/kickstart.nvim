@@ -114,7 +114,7 @@ vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
 -- buffer
-vim.keymap.set('n', '<leader>bd', '<cmd>bd<CR>', { desc = '[D]elete [B]uffer' })
+vim.keymap.set('n', '<leader>bd', '<cmd>bd<CR>', { desc = '[B]uffer [D]elete' })
 vim.keymap.set('n', '<leader>bn', '<cmd>bn<CR>', { desc = '[B]uffer [N]ext' })
 vim.keymap.set('n', '<leader>bp', '<cmd>bp<CR>', { desc = '[B]uffer [P]revious' })
 
@@ -659,12 +659,12 @@ require('lazy').setup({
     lazy = false,
     keys = {
       {
-        '<leader>f',
+        '<leader>bf',
         function()
           require('conform').format { async = true, lsp_fallback = true }
         end,
         mode = '',
-        desc = '[F]ormat buffer',
+        desc = '[B]uffer [F]ormat',
       },
     },
     opts = {
