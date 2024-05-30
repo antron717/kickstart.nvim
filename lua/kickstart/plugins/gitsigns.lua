@@ -37,21 +37,21 @@ return {
         map('v', '<leader>hs', function()
           gitsigns.stage_hunk { vim.fn.line '.', vim.fn.line 'v' }
         end, { desc = 'stage git hunk' })
-        map('v', '<leader>gr', function()
+        map('v', '<leader>hr', function()
           gitsigns.reset_hunk { vim.fn.line '.', vim.fn.line 'v' }
         end, { desc = 'reset git hunk' })
         -- normal mode
-        map('n', '<leader>gs', gitsigns.stage_hunk, { desc = 'git [s]tage hunk' })
-        map('n', '<leader>gr', gitsigns.reset_hunk, { desc = 'git [r]eset hunk' })
-        map('n', '<leader>gS', gitsigns.stage_buffer, { desc = 'git [S]tage buffer' })
-        map('n', '<leader>gu', gitsigns.undo_stage_hunk, { desc = 'git [u]ndo stage hunk' })
-        map('n', '<leader>gR', gitsigns.reset_buffer, { desc = 'git [R]eset buffer' })
-        map('n', '<leader>gP', gitsigns.preview_hunk, { desc = 'git [P]review hunk' })
-        map('n', '<leader>gb', gitsigns.blame_line, { desc = 'git [b]lame line' })
-        map('n', '<leader>gd', gitsigns.diffthis, { desc = 'git [d]iff against index' })
-        map('n', '<leader>gn', gitsigns.next_hunk, { desc = 'git [n]ext hunk' })
-        map('n', '<leader>gp', gitsigns.prev_hunk, { desc = 'git [p]rev hunk' })
-        map('n', '<leader>gD', function()
+        map('n', '<leader>hs', gitsigns.stage_hunk, { desc = 'git [s]tage hunk' })
+        map('n', '<leader>hr', gitsigns.reset_hunk, { desc = 'git [r]eset hunk' })
+        map('n', '<leader>hS', gitsigns.stage_buffer, { desc = 'git [S]tage buffer' })
+        map('n', '<leader>hu', gitsigns.undo_stage_hunk, { desc = 'git [u]ndo stage hunk' })
+        map('n', '<leader>hR', gitsigns.reset_buffer, { desc = 'git [R]eset buffer' })
+        map('n', '<leader>hp', gitsigns.preview_hunk, { desc = 'git [p]review hunk' })
+        map('n', '<leader>hb', gitsigns.blame_line, { desc = 'git [b]lame line' })
+        map('n', '<leader>hd', gitsigns.diffthis, { desc = 'git [d]iff against index' })
+        map('n', '<leader>hn', gitsigns.next_hunk, { desc = 'git [n]ext hunk' })
+        map('n', '<leader>hp', gitsigns.prev_hunk, { desc = 'git [p]rev hunk' })
+        map('n', '<leader>hD', function()
           gitsigns.diffthis '@'
         end, { desc = 'git [D]iff against last commit' })
         -- Toggles
