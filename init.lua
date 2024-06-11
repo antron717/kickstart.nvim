@@ -99,8 +99,8 @@ vim.keymap.set('n', 'J', 'mzJ`z')
 vim.keymap.set('x', '<leader>p', [["_dP]])
 
 -- Yank to clipboard
-vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]])
-vim.keymap.set('n', '<leader>Y', [["+Y]])
+vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]], { desc = '[Y]ank to clipboard' })
+vim.keymap.set('n', '<leader>Y', [["+Y]], { desc = '[Y]ank to clipboard (line)' })
 
 -- Delete don't yank
 vim.keymap.set({ 'n', 'v' }, '<leader>d', [["_d]])
@@ -317,6 +317,8 @@ require('lazy').setup({
         ['<leader>t'] = { name = '[T]oggle', _ = 'which_key_ignore' },
         ['<leader>h'] = { name = 'Git [H]unk', _ = 'which_key_ignore' },
         ['<leader>b'] = { name = '[B]uffer', _ = 'which_key_ignore' },
+        ['<leader>f'] = { name = '[F]ind', _ = 'which_key_ignore' },
+        ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
       }
       -- visual mode
       require('which-key').register({

@@ -44,6 +44,7 @@ return {
             ColorMyPencils()
         end
     },
+    { 'dracula/vim' },
 
 
 }
